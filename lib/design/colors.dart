@@ -6,6 +6,6 @@ const Color secondaryColor = Color(0xFF081B31);
 
 const Color secondaryVariantColor = Color(0x80081B31);
 
-const Color backgroundColor = Color(0x80F2F2F2);
+const Color backgroundColor = Color(0xFFF1F1F1);
 
 const Color surfaceColor = Color(0x80FFFFFF);
