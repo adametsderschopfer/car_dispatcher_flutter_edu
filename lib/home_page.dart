@@ -1,3 +1,4 @@
+import 'package:car_dispatcher_flutter_edu/design/images.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -5,9 +6,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text("Flutter by car"),
+        child: vehicleBusImage,
       ),
     );
   }
