@@ -1,4 +1,4 @@
-import 'package:car_dispatcher_flutter_edu/design/colors.dart';
+import 'package:car_dispatcher_flutter_edu/screens/vehicle/vehicle_item.dart';
 import 'package:flutter/cupertino.dart';
 
 class VehicleList extends StatelessWidget {
@@ -19,10 +19,7 @@ class VehicleList extends StatelessWidget {
             ),
         separatorBuilder: (BuildContext context, int index) =>
             const SizedBox(height: 8),
-        itemBuilder: (BuildContext context, int index) => Container(
-              height: 64,
-              color: surfaceColor,
-            ));
+        itemBuilder: (BuildContext context, int index) => const VehicleItem());
   }
 
   Widget _updateButton() {
