@@ -1,4 +1,5 @@
 import 'package:car_dispatcher_flutter_edu/design/colors.dart';
+import 'package:car_dispatcher_flutter_edu/design/style.dart';
 import 'package:flutter/material.dart';
 
 class AccentButton extends StatelessWidget {
@@ -23,8 +24,7 @@ class AccentButton extends StatelessWidget {
           title,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
-              color: surfaceColor, fontSize: 14, fontWeight: FontWeight.w600),
+          style: accentButtonTextStyle,
         ));
   }
 }

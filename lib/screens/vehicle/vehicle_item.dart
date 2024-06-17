@@ -1,6 +1,6 @@
 import 'package:car_dispatcher_flutter_edu/design/colors.dart';
-import 'package:car_dispatcher_flutter_edu/design/dimensions.dart';
 import 'package:car_dispatcher_flutter_edu/design/images.dart';
+import 'package:car_dispatcher_flutter_edu/design/style.dart';
 import 'package:flutter/material.dart';
 
 class VehicleItem extends StatelessWidget {
@@ -40,38 +40,27 @@ class VehicleItem extends StatelessWidget {
               "BMW GS-7638",
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                  color: secondaryColor,
-                  fontWeight: FontWeight.w600,
-                  fontSize: mediumFontSize),
+              style: body2TextStyle,
             ),
             if (false) // ToDo
               const Text(
                 "No driver",
-                style: TextStyle(
-                  color: secondaryVariantColor,
-                ),
+                style: hint1TextStyle,
               )
             else
               RichText(
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  text: const TextSpan(
-                      style: TextStyle(fontSize: mediumFontSize),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: "Driver: ",
-                          style: TextStyle(
-                            color: secondaryVariantColor,
-                          ),
-                        ),
-                        TextSpan(
-                          text: "Konstantin",
-                          style: TextStyle(
-                              color: secondaryColor,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ]))
+                  text: const TextSpan(children: <TextSpan>[
+                    TextSpan(
+                      text: "Driver: ",
+                      style: hint1TextStyle,
+                    ),
+                    TextSpan(
+                      text: "Konstantin",
+                      style: body2TextStyle,
+                    ),
+                  ]))
           ],
         ),
       ),
@@ -86,8 +75,7 @@ class VehicleItem extends StatelessWidget {
         children: <Widget>[
           stateLoadImage,
           const Text(
-            style: TextStyle(
-                color: secondaryVariantColor, fontSize: smallFontSize),
+            style: hint2TextStyle,
             "load",
           )
         ],
