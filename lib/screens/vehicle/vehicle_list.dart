@@ -1,3 +1,4 @@
+import 'package:car_dispatcher_flutter_edu/design/widgets/accent_button.dart';
 import 'package:car_dispatcher_flutter_edu/screens/vehicle/vehicle_item.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -7,15 +8,21 @@ class VehicleList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: <Widget>[_list(), _updateButton()],
+      children: <Widget>[
+        _list(context),
+        Align(alignment: Alignment.bottomCenter, child: _updateButton())
+      ],
     );
   }
 
-  Widget _list() {
+  Widget _list(BuildContext context) {
+    final safeBottomPadding = MediaQuery.of(context).padding.bottom;
+    final bottomPadding = (safeBottomPadding + 8) * 2 + 40;
+
     return ListView.separated(
         itemCount: 15,
-        padding: const EdgeInsets.only(
-            left: 16, top: 16, right: 16, bottom: 32 // todo Change
+        padding: EdgeInsets.only(
+            left: 16, top: 16, right: 16, bottom: bottomPadding // todo Change
             ),
         separatorBuilder: (BuildContext context, int index) =>
             const SizedBox(height: 8),
@@ -23,6 +30,10 @@ class VehicleList extends StatelessWidget {
   }
 
   Widget _updateButton() {
-    return Container();
+    return SafeArea(
+        child: Padding(
+      padding: const EdgeInsets.only(bottom: 8, left: 16, right: 16),
+      child: AccentButton(title: "Update", onTap: () {}),
+    ));
   }
 }
